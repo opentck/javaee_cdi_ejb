@@ -6,13 +6,13 @@ import org.opentck.javaee.cdi_ejb.deployments.beans.LocalI;
 import org.opentck.javaee.cdi_ejb.deployments.beans.RemoteI;
 import org.opentck.javaee.cdi_ejb.deployments.beans.singleton.BothViewsSingletonEJB;
 
-public class WarDeployedLocalEEInjectionTest extends LocalEEInjectionTest
+public class WarDeployedLocalEEInjectionTest extends LocalEEInjectionBase
 {
 
    @Deployment
    public static JavaArchive assemble()
    {
-      return createCDIArchive(LocalEEInjectionTest.class, BothViewsSingletonEJB.class, RemoteI.class, LocalI.class);
+      return createCDIArchive(LocalEEInjectionBase.class, BothViewsSingletonEJB.class, RemoteI.class, LocalI.class);
    }
 
 }

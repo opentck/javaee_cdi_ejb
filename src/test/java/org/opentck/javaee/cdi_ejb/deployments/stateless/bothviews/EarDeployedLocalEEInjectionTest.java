@@ -3,7 +3,7 @@ package org.opentck.javaee.cdi_ejb.deployments.stateless.bothviews;
 import org.jboss.arquillian.api.Deployment;
 import org.jboss.shrinkwrap.api.spec.EnterpriseArchive;
 
-public class EarDeployedLocalEEInjectionTest extends LocalEEInjectionTest
+public class EarDeployedLocalEEInjectionTest extends LocalEEInjectionBase
 {
 
    @Deployment

@@ -2,19 +2,15 @@ package org.opentck.javaee.cdi_ejb.deployments.visibility;
 
 import javax.inject.Inject;
 
-import junit.framework.Assert;
-
 import org.jboss.arquillian.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.opentck.javaee.cdi_ejb.deployments.DeploymentTest;
+import org.opentck.javaee.cdi_ejb.deployments.DeploymentBase;
 import org.opentck.javaee.cdi_ejb.deployments.beans.stateful.NoViewStatefulEJB;
 import org.opentck.javaee.cdi_ejb.deployments.beans.stateful.NoViewStatefulEJB2;
 
-@RunWith(Arquillian.class)
-public class WarClassesAndJarPackedVisibilityTest extends DeploymentTest
+public class WarClassesAndJarPackedVisibilityTest extends DeploymentBase
 {
    @Inject
    NoViewStatefulEJB ejb;

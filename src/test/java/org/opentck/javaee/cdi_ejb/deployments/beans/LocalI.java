@@ -6,5 +6,6 @@ import javax.ejb.Local;
 public interface LocalI
 {
    public void ping();
+
    public boolean isPinged();
 }

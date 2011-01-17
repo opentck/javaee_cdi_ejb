@@ -5,13 +5,13 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.opentck.javaee.cdi_ejb.deployments.beans.RemoteI;
 import org.opentck.javaee.cdi_ejb.deployments.beans.singleton.RemoteViewSingletonEJB;
 
-public class WarDeployedRemoteEEInjectionTest extends RemoteEEInjectionTest
+public class WarDeployedRemoteEEInjectionTest extends RemoteEEInjectionBase
 {
 
    @Deployment
    public static JavaArchive assemble()
    {
-      return createCDIArchive(RemoteEEInjectionTest.class, RemoteViewSingletonEJB.class, RemoteI.class);
+      return createCDIArchive(RemoteEEInjectionBase.class, RemoteViewSingletonEJB.class, RemoteI.class);
    }
 
 }

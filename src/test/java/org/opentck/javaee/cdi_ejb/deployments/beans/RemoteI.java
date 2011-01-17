@@ -8,5 +8,6 @@ import javax.ejb.Remote;
 public interface RemoteI extends Serializable
 {
    public void ping();
+
    public boolean isPinged();
 }

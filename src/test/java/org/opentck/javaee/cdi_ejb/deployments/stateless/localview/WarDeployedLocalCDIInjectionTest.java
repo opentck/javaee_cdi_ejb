@@ -5,13 +5,13 @@ import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.opentck.javaee.cdi_ejb.deployments.beans.LocalI;
 import org.opentck.javaee.cdi_ejb.deployments.beans.stateless.LocalViewStatelessEJB;
 
-public class WarDeployedLocalCDIInjectionTest extends LocalCDIInjectionTest
+public class WarDeployedLocalCDIInjectionTest extends LocalCDIInjectionBase
 {
 
    @Deployment
    public static JavaArchive assemble()
    {
-      return createCDIArchive(LocalCDIInjectionTest.class, LocalViewStatelessEJB.class, LocalI.class);
+      return createCDIArchive(LocalCDIInjectionBase.class, LocalViewStatelessEJB.class, LocalI.class);
    }
 
 }

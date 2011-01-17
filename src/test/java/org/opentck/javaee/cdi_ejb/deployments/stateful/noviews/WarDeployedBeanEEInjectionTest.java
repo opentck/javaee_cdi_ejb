@@ -4,13 +4,13 @@ import org.jboss.arquillian.api.Deployment;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.opentck.javaee.cdi_ejb.deployments.beans.stateful.NoViewStatefulEJB;
 
-public class WarDeployedBeanEEInjectionTest extends BeanEEInjectionTest
+public class WarDeployedBeanEEInjectionTest extends BeanEEInjectionBase
 {
 
    @Deployment
    public static JavaArchive assemble()
    {
-      return createCDIArchive(BeanEEInjectionTest.class, NoViewStatefulEJB.class);
+      return createCDIArchive(BeanEEInjectionBase.class, NoViewStatefulEJB.class);
    }
 
 }

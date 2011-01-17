@@ -9,6 +9,8 @@ import org.opentck.javaee.cdi_ejb.deployments.beans.RemoteI;
 @Model
 public class RemoteViewStatefulEJB implements RemoteI
 {
+   private static final long serialVersionUID = 1L;
+
    boolean pinged;
 
    public void ping()
