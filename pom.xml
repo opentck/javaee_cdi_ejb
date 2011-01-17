@@ -7,10 +7,17 @@
 
 	<properties>
 		<arquillian.version>1.0.0.Alpha4</arquillian.version>
+		<jboss_client.version>6.0.0.Final</jboss_client.version>
+		<jboss_manager.version>1.0.3.GA</jboss_manager.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>1.0-SP1</version>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -54,34 +61,41 @@
 				<dependency>
 					<groupId>org.jboss.jbossas</groupId>
 					<artifactId>jboss-server-manager</artifactId>
-					<version>1.0.3.GA</version>
+					<version>${jboss_manager.version}</version>
 				</dependency>
 				<dependency>
 					<groupId>org.jboss.jbossas</groupId>
 					<artifactId>jboss-as-client</artifactId>
-					<version>6.0.0.20100721-M4</version>
+					<version>${jboss_client.version}</version>
 					<type>pom</type>
-				</dependency>
-				<dependency>
-					<groupId>org.jboss.spec</groupId>
-					<artifactId>jboss-javaee-6.0</artifactId>
-					<version>1.0.0.Beta4</version>
-					<type>pom</type>
-					<scope>provided</scope>
-				</dependency>
-				<dependency>
-					<groupId>org.jboss.weld</groupId>
-					<artifactId>weld-core</artifactId>
-					<version>1.0.1-Final</version>
-					<scope>provided</scope>
-				</dependency>
-				<dependency>
-					<groupId>org.jboss.weld</groupId>
-					<artifactId>weld-api</artifactId>
-					<version>1.0-SP1</version>
-					<scope>provided</scope>
 				</dependency>
 			</dependencies>
+		</profile>
+		<profile>
+			<id>jbossas-remote-6</id>
+			<dependencies>
+				<dependency>
+					<groupId>org.jboss.arquillian.container</groupId>
+					<artifactId>arquillian-jbossas-remote-6</artifactId>
+					<version>${arquillian.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>org.jboss.jbossas</groupId>
+					<artifactId>jboss-as-client</artifactId>
+					<version>${jboss_client.version}</version>
+					<type>pom</type>
+				</dependency>
+			</dependencies>
+			<build>
+				<testResources>
+					<testResource>
+						<directory>src/test/resources</directory>
+					</testResource>
+					<testResource>
+						<directory>src/test/resources-jbossas-remote</directory>
+					</testResource>
+				</testResources>
+			</build>
 		</profile>
 		<profile>
 			<id>glassfish-embedded-3</id>
