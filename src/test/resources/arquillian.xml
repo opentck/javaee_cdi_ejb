@@ -3,8 +3,11 @@
 <arquillian xmlns="http://jboss.com/arquillian"
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
+<!-- remove comment to debug deployment 
+ 
 	<engine>
 		<deploymentExportPath>target/</deploymentExportPath>
 	</engine>
-	
+-->
+ 
 </arquillian>
