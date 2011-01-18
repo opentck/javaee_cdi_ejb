@@ -45,11 +45,16 @@ public abstract class DeploymentBase
    @SuppressWarnings("unchecked")
    public <T> T getNamedBean(String name, Class<T> clazz)
    {
-      Set<Bean<?>> beans = beanManager.getBeans(name);
+      Set<Bean<?>> beans = getBeans(name);
       Assert.assertEquals(1, beans.size());
       return (T) beanManager.getReference(
             beans.iterator().next(), 
             clazz, 
             beanManager.createCreationalContext(null));
+   }
+   
+   public Set<Bean<?>> getBeans(String name)
+   {
+      return beanManager.getBeans(name);
    }
 }

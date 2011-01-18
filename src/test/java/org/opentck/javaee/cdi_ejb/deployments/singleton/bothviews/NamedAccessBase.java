@@ -10,7 +10,7 @@ public abstract class NamedAccessBase extends DeploymentBase
    @Test
    public void runTest()
    {
-      Assert.assertNotNull(getNamedBean("bothViewSingletonEJB", Object.class));
+      Assert.assertNotNull(getNamedBean("bothViewsSingletonEJB", Object.class));
    }
    
 }

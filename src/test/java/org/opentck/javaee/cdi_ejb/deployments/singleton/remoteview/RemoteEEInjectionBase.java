@@ -19,5 +19,4 @@ public abstract class RemoteEEInjectionBase extends DeploymentBase
       ejb.ping();
       Assert.assertTrue(ejb.isPinged());
    }
-   
 }

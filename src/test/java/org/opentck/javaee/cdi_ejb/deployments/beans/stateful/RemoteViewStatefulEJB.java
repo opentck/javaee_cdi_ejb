@@ -1,12 +1,12 @@
 package org.opentck.javaee.cdi_ejb.deployments.beans.stateful;
 
 import javax.ejb.Stateful;
-import javax.enterprise.inject.Model;
+import javax.inject.Named;
 
 import org.opentck.javaee.cdi_ejb.deployments.beans.RemoteI;
 
 @Stateful
-@Model
+@Named
 public class RemoteViewStatefulEJB implements RemoteI
 {
    private static final long serialVersionUID = 1L;
