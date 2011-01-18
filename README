@@ -1,0 +1,5 @@
+Integration test suite for CDI and EJB
+
+org.opentck.javaee.cdi_ejb.deployments
+ 
+ Test aspects of CDI enabled War/Ear's and how it handles @Inject/@EJB injection and named Bean lookup of MessageDrive, Stateless, Stateful and Singleton beans.
